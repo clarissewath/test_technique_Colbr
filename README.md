@@ -1,8 +1,8 @@
 # test_technique_Colbr
 
-##Backend
+## Backend
 
-###Techno
+### Techno
 PHP Laravel 9 - PostgreSQL
 
 #### Description
@@ -10,12 +10,12 @@ Réalisation d'une API pour
 Route pour l’inscription d’un client
 Route pour la connexion
 
-##Frontend
+## Frontend
 
-###Techno
+### Techno
 REACT NextJs - TypeScript - CSS Tailwind 
 
-####Descripstion
+#### Descripstion
 Réalisation d'un formulaire d’inscription avec comme champs :
 - Prénom
 - Nom de famille
