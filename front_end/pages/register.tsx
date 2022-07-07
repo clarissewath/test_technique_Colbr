@@ -1,10 +1,12 @@
 import Link from "next/link"
 import axios from "axios"
 import { useState, ChangeEvent } from "react"
-
+import { useRouter } from 'next/router';
 
 export default function registerForm() {
     
+    const router = useRouter();
+
     const [data, setData] = useState({
         first: '',
         last: '',
@@ -21,7 +23,6 @@ export default function registerForm() {
     }
 
     const fetchData = (e: React.FormEvent<HTMLFormElement>) => {
-
         e.preventDefault();
 
         try {
@@ -48,16 +49,20 @@ export default function registerForm() {
             axios(config)
             .then(function (response) {
             console.log(JSON.stringify(response.data));
+            let result = JSON.stringify(response.data.success);
+            if (result)
+                {
+                    router.push('/login');
+                }
             })
             .catch(function (error) {
             console.log(error);
             });
         } catch (error) {
-            console.log(error)
+            alert("Information not valid");
         }
-       
     };
-    //console.log(data);
+    console.log(data);
     
     return (
         <div>
