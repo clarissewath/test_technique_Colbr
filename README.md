@@ -42,7 +42,7 @@ PHP Laravel 9 - PostgreSQL
 
 
 #### Description
-Create an API for users, routes : /register  /login
+Create users API, routes : /register  /login
 
 
 
@@ -52,7 +52,7 @@ REACT NextJs - TypeScript - CSS Tailwind
 
 
 
-#### Descripstion
+#### Description
 Create a registration form :
 - First name
 - Last name
