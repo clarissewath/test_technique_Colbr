@@ -2,7 +2,24 @@
 
 ## Installation
 
-Démarrer le projet avec
+Configure .env file to connect your database(db):
+
+```bash
+  cd api-test
+  api-test/.env
+  
+```
+
+```
+  DB_CONNECTION=    //the db that you're using(mysql, pgsql...)
+  DB_HOST=localhost 
+  DB_PORT=     //db port
+  DB_DATABASE=    //db name
+  DB_USERNAME=    //your db username or root...
+  DB_PASSWORD=    //db password if any
+```
+
+Start your prject with 
 
 front :
 
@@ -18,18 +35,6 @@ back :
   php artisan serve
 ```
 
-Configurer .env :
-
-```
-  DB_CONNECTION=    //préciser votre base de données (mysql, pgsql...)
-  DB_HOST=localhost 
-  DB_PORT=     //préciser le port de la base de données
-  DB_DATABASE=    //préciser le nom de la base de données
-  DB_USERNAME=    //préciser le nom de l'utilisateur de la base de données
-  DB_PASSWORD=    //préciser le mot de passe de l'utilisateur s'il y a
-```
-
-
 ## Backend
 ### Techno
 PHP Laravel 9 - PostgreSQL
@@ -37,9 +42,7 @@ PHP Laravel 9 - PostgreSQL
 
 
 #### Description
-Réalisation d'une API pour
-Route pour l’inscription d’un client
-Route pour la connexion
+Create an API for users, routes : /register  /login
 
 
 
@@ -50,9 +53,9 @@ REACT NextJs - TypeScript - CSS Tailwind
 
 
 #### Descripstion
-Réalisation d'un formulaire d’inscription avec comme champs :
-- Prénom
-- Nom de famille
+Create a registration form :
+- First name
+- Last name
 - Email
-- Mot de passe
-- Confirmation de mot de passe
+- Password
+- Password confirmation
