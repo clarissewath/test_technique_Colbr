@@ -1,22 +1,13 @@
 import axios from "axios"
-import { useState, ChangeEvent } from "react"
+import { useState } from "react"
 import { useRouter } from 'next/router';
 
 export default function loginForm() {
 
     const router = useRouter();
 
-    const [data, setData] = useState({
-        email: '',
-        password: ''
-    });
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    
-        const value = e.target.value;
-        const name = e.target.name;
-        setData({...data, [name]: value});
-    }
+    const [email,setEmail] = useState('');
+    const [password,setPassword] = useState('');
 
     const fetchData = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -25,8 +16,8 @@ export default function loginForm() {
             const url = "http://127.0.0.1:8000/api/login";
         
             let dataForm = new FormData()
-            dataForm.append('email', data.email);
-            dataForm.append('password', data.password);
+            dataForm.append('email', email);
+            dataForm.append('password', password);
     
             let config = {
                 method: 'post',
@@ -63,13 +54,13 @@ export default function loginForm() {
                     <label className="block text-sm font-bold mb-2 text-white">
                         Email
                     </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email" id="email" name="email" type="email" onChange={e=> handleChange(e)} required/>
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email" id="email" name="email" type="email" onChange={e=> setEmail(e.target.value)} required/>
                 </div>
                 <div className="mb-6">
                     <label className="block text-sm font-bold mb-2 text-white" >
                         Password
                     </label>
-                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="pwd" name="password" type="password" placeholder="Password" onChange={e=> handleChange(e)} required/>
+                    <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="pwd" name="password" type="password" placeholder="Password" onChange={e=> setPassword(e.target.value)} required/>
                 </div>
                 <div className="flex items-center justify-center">
                     <button className="bg-white hover:bg-black text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
