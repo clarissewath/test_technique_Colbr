@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Splash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital@1&display=swap');
+html {
+    /* font-family: 'Nunito', sans-serif; */
+    /* font-family: 'Splash', cursive; */
+    font-family: 'Cormorant', serif;
+}
+
+/* @layer base {
+    h1 {
+        @apply font-[Nunito];
+    }
+} */
