@@ -1,5 +1,24 @@
 # test_technique_Colbr
 
+## Installation
+
+Démarrer le projet avec
+
+front :
+
+```bash
+  cd front-end
+  npm run dev
+```
+
+back :
+
+```bash
+  cd api-test
+  php artisan serve
+```
+
+
 ## Backend
 ### Techno
 PHP Laravel 9 - PostgreSQL
